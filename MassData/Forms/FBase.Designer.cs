@@ -49,7 +49,9 @@ namespace MassData
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(1445, 30);
             this.pnlTitle.TabIndex = 0;
-            this.pnlTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FMain_MouseDown);
+            this.pnlTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelMove_MouseDown);
+            this.pnlTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelMove_MouseMove);
+            this.pnlTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelMove_MouseUp);
             // 
             // lblMainTitle
             // 
