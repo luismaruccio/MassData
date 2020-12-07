@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MassData.Database\MassData.Database.csproj" />
+    <ProjectReference Include="..\MassData.Helpers\MassData.Helpers.csproj" />
+    <ProjectReference Include="..\MassData.Models\MassData.Models.csproj" />
+    <ProjectReference Include="..\MassData.Views\MassData.Views.csproj" />
+  </ItemGroup>
+
+</Project>

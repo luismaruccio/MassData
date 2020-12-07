@@ -1,11 +1,8 @@
-using MassData.Forms;
+using MassData.StartUp.Contexts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MassData
+namespace MassData.StartUp
 {
     static class Program
     {
@@ -18,8 +15,7 @@ namespace MassData
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run();
-            
+            Application.Run(new MassDataContext());
         }
     }
 }
