@@ -1,10 +1,9 @@
-﻿using MassData.Classes;
-using MassData.Properties;
+﻿using MassData.Views.Classes;
+using MassData.Views.Properties;
 using System;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
-namespace MassData
+namespace MassData.Views.Forms
 {
     public partial class FBase : Form
     {

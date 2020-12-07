@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace MassData.Classes
+namespace MassData.Views.Classes
 {
     internal static class CustomColors
     {

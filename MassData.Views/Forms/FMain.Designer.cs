@@ -1,5 +1,5 @@
 ﻿
-namespace MassData.Forms
+namespace MassData.Views.Forms
 {
     partial class FMain
     {
@@ -29,8 +29,8 @@ namespace MassData.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.spnlLayouts = new MassData.Classes.ShadowPanel();
-            this.shadowPanel2 = new MassData.Classes.ShadowPanel();
+            this.spnlLayouts = new MassData.Views.Classes.ShadowPanel();
+            this.shadowPanel2 = new MassData.Views.Classes.ShadowPanel();
             this.lblLayoutTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.spnlLayouts.SuspendLayout();

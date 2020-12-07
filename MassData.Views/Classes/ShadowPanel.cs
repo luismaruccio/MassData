@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace MassData.Classes
+namespace MassData.Views.Classes
 {
     class ShadowPanel : Panel
     {

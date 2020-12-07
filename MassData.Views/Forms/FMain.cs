@@ -1,10 +1,10 @@
-﻿using MassData.Classes;
+﻿using MassData.Views.Classes;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace MassData.Forms
+namespace MassData.Views.Forms
 {
     public partial class FMain : FBase
     {

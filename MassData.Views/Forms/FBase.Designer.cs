@@ -1,5 +1,5 @@
 ﻿
-namespace MassData
+namespace MassData.Views.Forms
 {
     partial class FBase
     {
