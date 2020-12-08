@@ -1,5 +1,7 @@
 ﻿using MassData.Views.Classes;
+using MassData.Views.Properties;
 using System;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -8,9 +10,20 @@ namespace MassData.Views.Forms
 {
     public partial class FMain : FBase
     {
+        private int olderHeight;
+        private int olderWidth;
         public FMain()
         {
             InitializeComponent();
+        }
+
+        internal void SetLayouts(DataTable data)
+        {
+            dgvLayouts.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 14);
+            dgvLayouts.DataSource = data;
+            dgvLayouts.Columns[0].HeaderText = "Id";
+            dgvLayouts.Columns[1].HeaderText = "Nome";
+            dgvLayouts.Columns[2].Visible = false;
         }
 
         private void DropShadow(object sender, PaintEventArgs e)
@@ -39,7 +52,10 @@ namespace MassData.Views.Forms
 
         private void FMain_Load(object sender, EventArgs e)
         {
-            //pnlLayouts.Paint += DropShadow;
+            btnNew.Image = Resources.new_24px;
+            btnEdit.Image = Resources.edit_24px;
+            btnDel.Image = Resources.del_24px;
+            btnSearch.Image = Resources.search_24px;
         }
 
         private void FMain_Paint(object sender, PaintEventArgs e)
@@ -50,6 +66,39 @@ namespace MassData.Views.Forms
         private void shadowPanel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dgvLayouts_SelectionChanged(object sender, EventArgs e)
+        {
+            btnEdit.Enabled = btnDel.Enabled = (dgvLayouts.SelectedRows.Count > 0);
+        }
+
+        private void FMain_Resize(object sender, EventArgs e)
+        {
+            MaximizedBounds = Screen.GetWorkingArea(this);
+            if (Size.Height > 28)
+            {
+                ResizePanels();
+                Refresh();
+                olderHeight = Size.Height;
+                olderWidth = Size.Width;
+            }
+        }
+
+        private void ResizePanels()
+        {
+            if (olderHeight > 0 && olderWidth > 0)
+            {
+                spnlLayouts.Height += (Size.Height - olderHeight);
+                spnlForms.Height += (Size.Height - olderHeight);
+                spnlForms.Width += (Size.Width - olderWidth);
+            }
+        }
+
+        private void FMain_Shown(object sender, EventArgs e)
+        {
+            this.BringToFront();
+            Activate();
         }
     }
 }

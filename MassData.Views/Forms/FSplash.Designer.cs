@@ -29,6 +29,7 @@ namespace MassData.Views.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSplash));
             this.picbxLoading = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblbStatus = new System.Windows.Forms.Label();
@@ -86,9 +87,11 @@ namespace MassData.Views.Forms
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.picbxLoading);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FSplash";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.FSplash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbxLoading)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbcLogo)).EndInit();

@@ -4,10 +4,32 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <PackageId>MassData</PackageId>
+    <Authors>Luís Guilherme N. Maruccio; Marlon Ricci</Authors>
+    <Company>Conly</Company>
+    <Product>MassData</Product>
+    <AssemblyName>MassData</AssemblyName>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <StartupObject>MassData.StartUp.Program</StartupObject>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageIcon>Icon.ico</PackageIcon>
+    <RepositoryUrl>https://github.com/luismaruccio/MassData</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+    <PackageProjectUrl>https://github.com/luismaruccio/MassData</PackageProjectUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>MassData.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MassData.Controllers\MassData.Controllers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Icon.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

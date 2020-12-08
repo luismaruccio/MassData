@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.Common;
 using System.Data.SQLite;
 using System.IO;
@@ -62,6 +63,13 @@ namespace MassData.Database.Connections
         internal void CommitTransaction()
         {
             transactionInstance.Commit();
+        }
+
+        internal DataTable CastDataReader(DbDataReader dbDataReader)
+        {
+            DataTable dt = new DataTable();
+            dt.Load(dbDataReader);
+            return dt;
         }
     }
 }
